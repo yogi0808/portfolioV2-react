@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    font-family: "Rubik", sans-serif;
+    color: #FFE8DC;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffe8dc37;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffe8dc;
+    border-radius: 5px;
+}
