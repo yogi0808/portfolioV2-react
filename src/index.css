@@ -16,6 +16,11 @@
 html,
 body {
     overflow-x: hidden;
+    background-image: url(./assets/noise.png);
+}
+
+.noise {
+    background-image: url(./assets/noise.png);
 }
 
 /* width */
