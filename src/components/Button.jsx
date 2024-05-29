@@ -52,7 +52,7 @@ const Button = ({ text, link, customClassis, onClick, duration }) => {
 
   return link ? (
     <a
-      className={`flex bg-[#ffe8dc] opacity-70 px-4 py-2 w-fit rounded-full text-xl clip-path leading-6 ${
+      className={`flex bg-[#ffe8dc] hover:opacity-100 transition-opacity ease-in-out duration-700 opacity-70 px-4 py-2 w-fit rounded-full text-xl clip-path leading-6 ${
         customClassis ? customClassis : ""
       }`}
       target="_blank"
@@ -64,7 +64,7 @@ const Button = ({ text, link, customClassis, onClick, duration }) => {
     </a>
   ) : (
     <button
-      className={`flex bg-[#ffe8dc] opacity-70 px-4 py-2 w-fit rounded-full text-xl clip-path leading-6 ${
+      className={`flex bg-[#ffe8dc] hover:opacity-100 transition-opacity ease-in-out duration-700 opacity-70 px-4 py-2 w-fit rounded-full text-xl clip-path leading-6 ${
         customClassis ? customClassis : ""
       }`}
       onClick={onClick}

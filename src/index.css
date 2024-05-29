@@ -23,6 +23,11 @@ body {
     background-image: url(./assets/noise.png);
 }
 
+::selection {
+    color: #111;
+    background: #ff9d00;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 7px;

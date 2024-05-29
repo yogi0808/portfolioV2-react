@@ -3,6 +3,7 @@ import Logo from "../assets/svg/Logo"
 import { socialLinks } from "../constants"
 import Section from "../components/Section"
 import Button from "../components/Button"
+import { motion, useAnimation } from "framer-motion"
 
 const Contact = () => {
   const [email, setEmail] = useState("gojiyayogesh08@gmail.com")
@@ -23,7 +24,7 @@ const Contact = () => {
     >
       <div className="w-full flex flex-wrap gap-16 lg:gap-0">
         <div className="lg:w-2/3 w-full flex items-center sm:items-start justify-center flex-col md:pl-8 gap-4">
-          <h5 className="h5 font-medium tracking-wider opacity-70">
+          <h5 className="h5 font-medium tracking-wider opacity-60">
             Get in touch <span className="h6">(Click to copy)</span>
           </h5>
           <Button
@@ -33,28 +34,45 @@ const Contact = () => {
             onClick={handelClick}
           />
         </div>
-        <div className="lg:w-1/3 w-full flex items-center justify-center opacity-70">
-          <div className="w-80 h-80 relative flex items-center justify-center rounded-full border border-[#FFE8DC]">
-            <div className="w-44 h-44 flex items-center justify-center rounded-full border border-[#FFE8DC]">
-              <div className="w-24">
+        <div className="lg:w-1/3 w-full flex items-center justify-center ">
+          <div className="w-80 h-80 flex relative items-center justify-center rounded-full border border-[#FFE8DC] opacity-60">
+            <div className="w-44 h-44 flex items-center justify-center rounded-full border border-[#FFE8DC] opacity-60">
+              <div className="w-24 opacity-60">
                 <Logo />
               </div>
-              <div ref={(el) => (linsRef = el)}>
+              <motion.div
+                ref={(el) => (linsRef = el)}
+                className="h-full w-full absolute"
+                initial={{ rotate: 0 }}
+                animate={{ rotate: 360 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 20,
+                  ease: "linear",
+                }}
+              >
                 {socialLinks.map((item) => (
                   <a
+                    className={`absolute ${item.classis} transition-opacity ease-in opacity-60 hover:opacity-100`}
                     key={item.id}
                     href={item.link}
                     target="_blank"
                   >
-                    <img
-                      className={`absolute ${item.classis}`}
+                    <motion.img
                       src={item.icon}
                       alt={item.title}
                       width={50}
+                      initial={{ rotate: 0 }}
+                      animate={{ rotate: -360 }}
+                      transition={{
+                        repeat: Infinity,
+                        duration: 20,
+                        ease: "linear",
+                      }}
                     />
                   </a>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
