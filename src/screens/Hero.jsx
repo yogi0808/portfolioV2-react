@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from "react"
 import Section from "../components/Section"
-import curve from "../assets/curve.png"
+import curve from "../assets/curve.webp"
 import { useGSAP } from "@gsap/react"
 import { heroText } from "../constants"
 import load from "../assets/logo light.gif"
@@ -33,7 +33,7 @@ const Hero = ({ tl }) => {
         opacity: 0,
         stagger: 0.03,
       })
-      .from(splineRef.children, {
+      .from(splineRef.current, {
         opacity: 0,
         scale: 0.5,
       })
@@ -119,24 +119,26 @@ const Hero = ({ tl }) => {
           )}
         </h3>
       </div>
-      <Suspense
-        fallback={
-          <div className="w-full h-[515px] sm:h-[502px] md:h-[450px] lg:h-[633px] flex items-center justify-center">
+      <div
+        className="w-full h-[515px] sm:h-[502px] md:h-[450px] lg:h-[633px] flex items-center justify-center"
+        ref={splineRef}
+      >
+        <Suspense
+          fallback={
             <img
               src={load}
               alt="Loading..."
               width={150}
               className=" opacity-10"
             />
-          </div>
-        }
-      >
-        <Spline
-          ref={(el) => (splineRef = el)}
-          className="flex max-w-full  h-[515px] sm:h-[502px] md:h-[450px] lg:h-[633px] items-center justify-center aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/450] lg:aspect-[1024/450] pointer-events-none sm:pointer-events-auto"
-          scene="https://prod.spline.design/i1GWAw-hnIuYVWE8/scene.splinecode"
-        />
-      </Suspense>
+          }
+        >
+          <Spline
+            className="flex max-w-full  h-[515px] sm:h-[502px] md:h-[450px] lg:h-[633px] items-center justify-center aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/450] lg:aspect-[1024/450] pointer-events-none sm:pointer-events-auto"
+            scene="https://prod.spline.design/i1GWAw-hnIuYVWE8/scene.splinecode"
+          />
+        </Suspense>
+      </div>
     </Section>
   )
 }

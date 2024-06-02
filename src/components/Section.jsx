@@ -1,5 +1,3 @@
-import React from "react"
-
 const Section = ({ children, customClassis, id }) => {
   return (
     <section

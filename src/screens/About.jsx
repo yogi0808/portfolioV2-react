@@ -1,5 +1,5 @@
 import Section from "../components/Section"
-import Me from "../assets/me.jpg"
+import Me from "../assets/me.webp"
 import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"

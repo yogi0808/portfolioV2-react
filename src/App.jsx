@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import { useRef } from "react"
 import LocomotiveScroll from "locomotive-scroll"
 import "locomotive-scroll/locomotive-scroll.css"
 import gsap from "gsap"

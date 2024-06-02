@@ -3,7 +3,7 @@ import Logo from "../assets/svg/Logo"
 import { socialLinks } from "../constants"
 import Section from "../components/Section"
 import Button from "../components/Button"
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Contact = () => {
   const [email, setEmail] = useState("gojiyayogesh08@gmail.com")

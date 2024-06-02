@@ -1,7 +1,4 @@
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
-import { useRef } from "react"
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 const NavL = ({ link, handelClick, locoScroll }) => {
   const [isHover, setIsHover] = useState(false)

@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'noise': "url('src/assets/noise.png')"
+        'noise': "url('src/assets/noise.webp')"
       },
     },
   },

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { navLinks } from "../constants"
 import MenuSvg from "../assets/svg/MenuSvg"
 import { useGSAP } from "@gsap/react"
