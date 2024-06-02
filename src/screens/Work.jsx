@@ -43,7 +43,7 @@ const Work = () => {
         >
           {works.map((work) => (
             <div
-              className="flex max-md:border max-md:border-[#ffe8dc] max-md:p-4 rounded-md w-full xl:w-[70%] md:max-h-[350px] flex-wrap-reverse md:absolute bg-[#111] noise md:translate-y-full overflow-hidden first:translate-y-0 max-md:justify-center max-md:gap-8"
+              className="flex max-md:border max-md:border-[#ffe8dc] max-md:p-4 rounded-md w-full xl:w-[80%] md:max-h-[350px] flex-wrap-reverse md:absolute bg-[#111] noise md:translate-y-full overflow-hidden first:translate-y-0 max-md:justify-center max-md:gap-8"
               key={work.id}
             >
               <div className="md:w-1/2 w-full flex flex-col justify-center gap-4 md:pr-10 max-md:items-center">
