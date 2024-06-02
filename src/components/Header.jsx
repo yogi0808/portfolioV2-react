@@ -57,11 +57,7 @@ const Header = ({ tl }) => {
               <div
                 ref={logoRef}
                 className="h-[80px] w-fit opacity-0 -translate-y-5 cursor-pointer"
-                onClick={() =>
-                  locoScroll.scrollTo("top", {
-                    offset: 200,
-                  })
-                }
+                onClick={() => locoScroll.scrollTo("top")}
               >
                 <Logo />
               </div>
