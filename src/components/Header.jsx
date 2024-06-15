@@ -6,25 +6,11 @@ import Logo from "../assets/svg/Logo"
 import LocomotiveScroll from "locomotive-scroll"
 import NavL from "./NavL"
 import { disablePageScroll, enablePageScroll } from "scroll-lock"
-import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 
 const Header = ({ tl }) => {
   const locoScroll = new LocomotiveScroll()
 
   const [isNavOpen, setIsNavOpen] = useState(false)
-  const [isHidden, setIsHidden] = useState(false)
-  const latestYRef = useRef(0)
-
-  const { scrollY } = useScroll()
-
-  useMotionValueEvent(scrollY, "change", (y) => {
-    const deference = y - latestYRef.current
-    if (Math.abs(deference) > 50) {
-      setIsHidden(deference > 0)
-
-      latestYRef.current = y
-    }
-  })
 
   let logoRef = useRef()
   let navRef = useRef()
@@ -64,21 +50,7 @@ const Header = ({ tl }) => {
 
   return (
     <>
-      <motion.div
-        animate={isHidden ? "hidden" : "show"}
-        onFocusCapture={() => setIsHidden(false)}
-        whileHover={"show"}
-        variants={{
-          hidden: {
-            y: "-80%",
-          },
-          show: {
-            y: "0%",
-          },
-        }}
-        transition={{ duration: 0.2 }}
-        className="w-full fixed top-0 left-0 z-[999] -translate-y-[80%]"
-      >
+      <div className="w-full fixed top-0 left-0 z-[999]">
         <div className="px-4 md:px-12 border-b border-zinc-300 rounded-lg backdrop-blur-md">
           <div className="flex justify-between items-center flex-wrap md:flex-nowrap">
             <div className="w-full md:w-fit grid md:flex grid-cols-2 items-center justify-between">
@@ -127,7 +99,7 @@ const Header = ({ tl }) => {
           <div className="w-20 h-10 rounded-full absolute top-0 right-0 bg-[#ff4b93]"></div>
           <div className="w-24 h-12 rounded-full absolute bottom-0 right-32 sm:right-44 bg-[#5407ff]"></div>
         </div>
-      </motion.div>
+      </div>
     </>
   )
 }
