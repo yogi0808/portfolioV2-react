@@ -32,3 +32,7 @@ This is an animated portfolio website built using React, GSAP, Locomotive Scroll
 2. Explore the portfolio and interact with the animations and 3D models.
 
 ## Screenshots
+
+![portfolioi webiste](https://github.com/yogi0808/portfolioV2/assets/148646093/63ee9e71-129f-4066-a675-acb408fa18c6)
+
+![portfolioi webiste2](https://github.com/yogi0808/portfolioV2/assets/148646093/be339dbe-ee4e-4b54-b5fc-cb9f6c506536)
