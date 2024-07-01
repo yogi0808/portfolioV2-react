@@ -21,6 +21,7 @@ This is an animated portfolio website built using React, GSAP, Locomotive Scroll
 
 - **Frontend:**
   - React
+  - Tailwind CSS
   - GSAP (GreenSock Animation Platform)
   - Locomotive Scroll
   - Spline
