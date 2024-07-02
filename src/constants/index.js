@@ -43,24 +43,6 @@ export const aboutText = `Hi, I'm Yogesh Gojiya, a dedicated web developer with 
 export const works = [
   {
     id: "1",
-    img: luxuryWeb,
-    title: "Luxury Photos & frames",
-    description: "Developed a dynamic e-commerce platform for selling photos and frames, featuring a user-friendly interface and comprehensive admin panel for efficient management. The platform ensures seamless navigation and efficient product handling, enhancing both user experience and administrative control.",
-    techStack: [
-      "HTML", "CSS", "JavaScript", "PHP", "MySQL"
-    ],
-    link: "#"
-  }, {
-    id: "2",
-    img: luxuryApp,
-    title: "Luxury Application",
-    description: "Created a robust e-commerce application with a seamless user experience and real-time database integration, leveraging Flutter, Dart, and Firebase. The app offers smooth navigation, efficient product management, and real-time updates for an enhanced shopping experience.",
-    techStack: [
-      "Flutter", "Dart", "Firebase"
-    ],
-    link: "#"
-  }, {
-    id: "3",
     img: workHoursTracker,
     title: "Work Hours Tracker",
     description: "Developed a website to track daily work hours, including start and end times, with records saved in local storage. Utilizing React and TailwindCSS, the site provides a streamlined interface for efficient time tracking and record keeping.",
@@ -69,7 +51,16 @@ export const works = [
     ],
     link: "https://yogi0808.github.io/Work_Hours_Tracker"
   }, {
-    id: "4",
+    id: "2",
+    img: blogWebsite,
+    title: "Blog Website",
+    description: "Developed a full-stack blog application using the MERN stack (React, Node.js, Express, MongoDB) with JWT authentication.  This interactive platform allows users to create, edit, and delete blog posts. Administrators can manage user accounts through a dedicated dashboard.",
+    techStack: [
+      "React", "Node.js", "Express", "MongoDB", "Redux"
+    ],
+    link: "https://github.com/yogi0808/MERN-Blog-Website.git"
+  }, {
+    id: "3",
     img: todoApp,
     title: "To-Do App",
     description: "Created a feature-rich to-do app with local storage for efficient task management, leveraging Flutter and Dart. The app offers users a seamless experience, allowing them to easily add, track, and manage tasks with the convenience of local data persistence.",
@@ -78,14 +69,23 @@ export const works = [
     ],
     link: "https://github.com/yogi0808/ToDoApp.git"
   }, {
-    id: "5",
-    img: blogWebsite,
-    title: "Blog Website",
-    description: "Developed a full-stack blog application using the MERN stack (React, Node.js, Express, MongoDB) with JWT authentication.  This interactive platform allows users to create, edit, and delete blog posts. Administrators can manage user accounts through a dedicated dashboard.",
+    id: "4",
+    img: luxuryApp,
+    title: "Luxury Application",
+    description: "Created a robust e-commerce application with a seamless user experience and real-time database integration, leveraging Flutter, Dart, and Firebase. The app offers smooth navigation, efficient product management, and real-time updates for an enhanced shopping experience.",
     techStack: [
-      "React", "Node.js", "Express", "MongoDB", "Redux"
+      "Flutter", "Dart", "Firebase"
     ],
-    link: "https://github.com/yogi0808/MERN-Blog-Website.git"
+    link: "#"
+  }, {
+    id: "5",
+    img: luxuryWeb,
+    title: "Luxury Photos & frames",
+    description: "Developed a dynamic e-commerce platform for selling photos and frames, featuring a user-friendly interface and comprehensive admin panel for efficient management. The platform ensures seamless navigation and efficient product handling, enhancing both user experience and administrative control.",
+    techStack: [
+      "HTML", "CSS", "JavaScript", "PHP", "MySQL"
+    ],
+    link: "#"
   }
 ]
 
