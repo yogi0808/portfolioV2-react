@@ -21,17 +21,17 @@ const Hero = ({ tl }) => {
     tl.from(text1Ref.children, {
       y: 60,
       opacity: 0,
-      stagger: 0.03,
+      stagger: 0.02,
     })
       .from(nameRef.children, {
         y: 60,
         opacity: 0,
-        stagger: 0.03,
+        stagger: 0.02,
       })
       .from(text2Ref.children, {
         y: 60,
         opacity: 0,
-        stagger: 0.03,
+        stagger: 0.02,
       })
       .from(splineRef.current, {
         opacity: 0,

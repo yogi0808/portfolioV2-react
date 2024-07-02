@@ -1,6 +1,7 @@
 import luxuryWeb from "../assets/works/luxury photo & frames/cover.webp"
 import luxuryApp from "../assets/works/luxury_app/lp1.webp"
 import workHoursTracker from "../assets/works/workHoverTracker.webp"
+import blogWebsite from "../assets/works/BlogWebsite.webp"
 import todoApp from "../assets/works/todo_app/main_image_for_todo.webp"
 import github from "../assets/svg/github.svg"
 import linkedin from "../assets/svg/linkedin.svg"
@@ -76,7 +77,16 @@ export const works = [
       "Flutter", "Dart",
     ],
     link: "https://github.com/yogi0808/ToDoApp.git"
-  },
+  }, {
+    id: "5",
+    img: blogWebsite,
+    title: "Blog Website",
+    description: "Developed a full-stack blog application using the MERN stack (React, Node.js, Express, MongoDB) with JWT authentication.  This interactive platform allows users to create, edit, and delete blog posts. Administrators can manage user accounts through a dedicated dashboard.",
+    techStack: [
+      "React", "Node.js", "Express", "MongoDB", "Redux"
+    ],
+    link: "https://github.com/yogi0808/MERN-Blog-Website.git"
+  }
 ]
 
 export const socialLinks = [

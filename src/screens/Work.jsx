@@ -48,7 +48,7 @@ const Work = () => {
             >
               <div className="md:w-1/2 w-full flex flex-col justify-center gap-4 md:pr-10 max-md:items-center">
                 <h1 className="h3 font-semibold opacity-70">{work.title}</h1>
-                <p className=" opacity-40">{work.description}</p>
+                <p className=" opacity-40 line-clamp-5">{work.description}</p>
                 <div className="flex flex-wrap">
                   {work.techStack.map((item, ind) => (
                     <span
