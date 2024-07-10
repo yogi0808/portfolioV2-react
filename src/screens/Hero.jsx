@@ -1,10 +1,13 @@
+import { useGSAP } from "@gsap/react"
 import React, { Suspense, useRef } from "react"
+
+// Files
 import Section from "../components/Section"
 import curve from "../assets/curve.webp"
-import { useGSAP } from "@gsap/react"
 import { heroText } from "../constants"
 import load from "../assets/logo light.gif"
 
+// Lazy import for Spline
 const Spline = React.lazy(() => import("@splinetool/react-spline"))
 
 const Hero = ({ tl }) => {
@@ -17,6 +20,7 @@ const Hero = ({ tl }) => {
   let text2Ref = useRef()
   let splineRef = useRef()
 
+  // GSAP animation for hero texts
   useGSAP(() => {
     tl.from(text1Ref.children, {
       y: 60,

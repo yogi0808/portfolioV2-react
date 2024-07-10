@@ -1,7 +1,9 @@
+import gsap from "gsap"
 import { useRef } from "react"
 import LocomotiveScroll from "locomotive-scroll"
 import "locomotive-scroll/locomotive-scroll.css"
-import gsap from "gsap"
+
+// Files
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Hero from "./screens/Hero"
@@ -11,9 +13,12 @@ import Work from "./screens/Work"
 import Contact from "./screens/Contact"
 
 export default function App() {
+  // Creating time line for Header and Hero section
   const headerAndHeroTl = gsap.timeline()
 
   const containerRef = useRef()
+
+  // Configuring Locomotive Scroll
   const locomotiveScroll = new LocomotiveScroll({
     el: containerRef.current,
     smooth: true,

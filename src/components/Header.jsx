@@ -1,11 +1,13 @@
+import { useGSAP } from "@gsap/react"
 import { useRef, useState } from "react"
+import LocomotiveScroll from "locomotive-scroll"
+import { disablePageScroll, enablePageScroll } from "scroll-lock"
+
+// Files
 import { navLinks } from "../constants"
 import MenuSvg from "../assets/svg/MenuSvg"
-import { useGSAP } from "@gsap/react"
 import Logo from "../assets/svg/Logo"
-import LocomotiveScroll from "locomotive-scroll"
 import NavL from "./NavL"
-import { disablePageScroll, enablePageScroll } from "scroll-lock"
 
 const Header = ({ tl }) => {
   const locoScroll = new LocomotiveScroll()
@@ -16,6 +18,7 @@ const Header = ({ tl }) => {
   let navRef = useRef()
   let bgObjectRef = useRef()
 
+  // GSAP animation for logo, links and background boxes
   useGSAP(() => {
     tl.to(logoRef.current, {
       y: 0,
@@ -33,11 +36,13 @@ const Header = ({ tl }) => {
       })
   })
 
+  // Handling Close nav menu In link click
   const handelClick = () => {
     setIsNavOpen(false)
     enablePageScroll()
   }
 
+  // Handling toggle nav menu
   const toggleNav = () => {
     if (isNavOpen) {
       setIsNavOpen(false)

@@ -3,12 +3,14 @@ import { useRef, useState } from "react"
 const NavL = ({ link, handelClick, locoScroll }) => {
   const [isHover, setIsHover] = useState(false)
 
+  // making Transform Style based on Hover state
   const getTransformStyle = (isHover, ind) => ({
     transform: `translateY(${isHover ? "-100%" : "0%"})`,
     transitionDelay: `${ind * 0.05}s`,
     transitionDuration: "0.4s",
   })
 
+  // Splitting Text to Characters
   const titleSplit = (title) => {
     const titleArr = title.split("")
 

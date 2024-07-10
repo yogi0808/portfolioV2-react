@@ -1,12 +1,15 @@
-import Section from "../components/Section"
-import Me from "../assets/me.webp"
+import gsap from "gsap"
 import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
+
+// Files
+import Section from "../components/Section"
+import Me from "../assets/me.webp"
 import { aboutText } from "../constants"
 
 const About = () => {
   const heading = "About Me".split("")
+
   let headingRef = useRef()
   let aboutRef = useRef()
   const triggerRef = useRef()
@@ -14,6 +17,7 @@ const About = () => {
 
   const aboutMe = aboutText.split(" ")
 
+  // GSAP animation for about me title, Image and description
   useGSAP(() => {
     const tl = gsap.timeline()
 

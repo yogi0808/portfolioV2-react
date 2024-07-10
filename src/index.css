@@ -23,6 +23,8 @@ body {
     background-image: url(./assets/noise.webp);
 }
 
+
+/* ScrollBar Styling */
 ::selection {
     color: #111;
     background: #ff9d00;

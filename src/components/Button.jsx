@@ -3,12 +3,14 @@ import { useRef, useState } from "react"
 const Button = ({ text, link, customClassis, onClick, duration }) => {
   const [isHover, setIsHover] = useState(false)
 
+  // making Transform Style based on Hover state
   const getTransformStyle = (isHover, ind) => ({
     transform: `translateY(${isHover ? "-100%" : "0%"})`,
     transitionDelay: `${ind * 0.03}s`,
     transitionDuration: `${duration ? duration : "0.2s"}`,
   })
 
+  // Splitting Text to Characters
   const textSplit = (title) => {
     const titleArr = title.split("")
 
@@ -50,6 +52,7 @@ const Button = ({ text, link, customClassis, onClick, duration }) => {
 
   let texts = useRef()
 
+  // Conditionally rendering Link or Button based on Prop
   return link ? (
     <a
       className={`flex bg-[#ffe8dc] hover:opacity-100 transition-opacity ease-in-out duration-700 opacity-70 px-4 py-2 w-fit rounded-full text-xl clip-path leading-6 ${

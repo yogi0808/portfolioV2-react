@@ -1,17 +1,24 @@
-import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
-import Section from "../components/Section"
 import { useRef } from "react"
+import { useGSAP } from "@gsap/react"
+import ScrollTrigger from "gsap/ScrollTrigger"
+
+// Files
+import Section from "../components/Section"
 import { works } from "../constants"
 import Button from "../components/Button"
+
+// Registering GSAP ScrollTrigger pulugin
 gsap.registerPlugin(ScrollTrigger)
 
 const Work = () => {
   let wrapper = useRef()
   const pinnerRef = useRef()
 
+  // using match media for GSAP media query
   let mm = gsap.matchMedia()
+
+  // GSAP animation for work Card's
   mm.add("(min-width: 768px)", () => {
     useGSAP(() => {
       gsap.to(wrapper.children, {

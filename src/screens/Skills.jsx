@@ -1,10 +1,14 @@
-import { motion } from "framer-motion"
-import Section from "../components/Section"
-import SkillsSvgs from "../assets/svg/SkillsSvgs"
+import gsap from "gsap"
 import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
+import { motion } from "framer-motion"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+// Files
+import Section from "../components/Section"
+import SkillsSvgs from "../assets/svg/SkillsSvgs"
+
+// Registering GSAP ScrollTrigger Plugin
 gsap.registerPlugin(ScrollTrigger)
 
 const Skills = () => {
@@ -13,6 +17,7 @@ const Skills = () => {
 
   const heading = "Skills".split("")
 
+  // GSAP animation for title text
   useGSAP(() => {
     gsap.from(headingRef.children, {
       scrollTrigger: {

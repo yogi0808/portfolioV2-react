@@ -1,13 +1,15 @@
-import luxuryWeb from "../assets/works/luxury photo & frames/cover.webp"
-import luxuryApp from "../assets/works/luxury_app/lp1.webp"
-import workHoursTracker from "../assets/works/workHoverTracker.webp"
-import blogWebsite from "../assets/works/BlogWebsite.webp"
-import todoApp from "../assets/works/todo_app/main_image_for_todo.webp"
+import x from "../assets/svg/x.svg"
 import github from "../assets/svg/github.svg"
 import linkedin from "../assets/svg/linkedin.svg"
-import x from "../assets/svg/x.svg"
 import instagram from "../assets/svg/instagram.svg"
+import blogWebsite from "../assets/works/BlogWebsite.webp"
+import luxuryApp from "../assets/works/luxury_app/lp1.webp"
+import workHoursTracker from "../assets/works/workHoverTracker.webp"
+import todoApp from "../assets/works/todo_app/main_image_for_todo.webp"
+import luxuryWeb from "../assets/works/luxury photo & frames/cover.webp"
 
+
+// Navigation links
 export const navLinks = [
   {
     id: "0",
@@ -36,10 +38,14 @@ export const navLinks = [
   },
 ]
 
+// Hero text Content
 export const heroText = ["Hi There, I'm", "Yogesh Gojiya", "Web Developer"]
 
+// About me Content
 export const aboutText = `Hi, I'm Yogesh Gojiya, a dedicated web developer with a Bachelor's degree in Computer Applications (BCA). With a strong foundation in both front-end and back-end technologies, I specialize in creating dynamic, responsive, and user-friendly web applications. My journey into web development began out of a deep curiosity for how websites work and a passion for building meaningful digital experiences. Over the years, I have developed a keen eye for detail and a commitment to writing clean, efficient code that meets the highest standards of quality. I am continuously learning and staying updated with the latest industry trends and best practices to ensure my skills remain sharp and relevant. I thrive on collaboration and enjoy working closely with clients to bring their visions to life, ensuring each project is both functional and visually appealing. Outside of coding, I enjoy exploring new technologies and contributing to open-source projects. I'm always open to new opportunities and collaborations, so if you have a project in mind or simply want to connect, feel free to reach out!`
 
+
+// Projects details and images
 export const works = [
   {
     id: "1",
@@ -89,6 +95,7 @@ export const works = [
   }
 ]
 
+// Social Links with Links and custom ClassName's
 export const socialLinks = [
   {
     id: "0",
